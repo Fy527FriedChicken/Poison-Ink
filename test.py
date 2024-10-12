@@ -3,14 +3,12 @@ Training script for CIFAR-10/100
 Copyright (c) Wei YANG, 2017
 '''
 from __future__ import print_function
-
 import argparse
 import os
 import shutil
 import time
 import random
 import numpy as np
-
 import torch
 import torch.nn as nn
 import torch.nn.parallel
@@ -20,15 +18,12 @@ import torch.utils.data as data
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import models.cifar as models
-
 from utils import Bar, Logger, AverageMeter, accuracy, mkdir_p, savefig
-
 from data.ori_dataset import ori_folder
 from data.wm_dataset import wm_folder, wm_subfolder, adv_subfolder
 from models.ReflectionUNet import UnetGenerator2,UnetGenerator_IN2
 from torch.utils.data import DataLoader
 import shutil
-
 from PIL import Image, ImageFilter
 import cv2
 
